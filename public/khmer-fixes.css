@@ -1,0 +1,37 @@
+/* Keep Latin text in Nunito while Khmer glyphs fall back to Battambang. */
+html[lang="km"] body {
+    font-family: Nunito, Battambang, sans-serif;
+}
+
+html[lang="km"] h1,
+html[lang="km"] h2 {
+    letter-spacing: normal;
+    line-height: 1.22;
+}
+
+html[lang="km"] .hero h1,
+html[lang="km"] .activities-hero h1,
+html[lang="km"] .stories-hero h1,
+html[lang="km"] .events-premium-hero h1 {
+    letter-spacing: -.035em;
+    line-height: 1.08;
+}
+
+html[lang="km"] .eyebrow {
+    letter-spacing: .08em;
+}
+
+html,
+body {
+    overflow-x: clip;
+}
+
+@media (max-width: 700px) {
+    html[lang="km"] .hero h1,
+    html[lang="km"] .activities-hero h1,
+    html[lang="km"] .stories-hero h1,
+    html[lang="km"] .events-premium-hero h1 {
+        font-size: clamp(2.35rem, 11vw, 3.25rem);
+        line-height: 1.18;
+    }
+}

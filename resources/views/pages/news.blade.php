@@ -1,0 +1,8 @@
+@extends('layouts.app')
+@section('title', 'School News | Smart Start')
+@section('content')
+<x-page-hero eyebrow="From our community" title="Stories worth sharing" text="Celebrating the questions, creativity, and connections that make each school week special." />
+@php $stories=[['beyond-classroom','Learning beyond the classroom','Learning','Grade 4 students turned a local garden into a living science laboratory.','photo-1500530855697-b586d89ba3ee'],['reading-week','Reading week brings stories alive','Community','Costumes, author visits, and family storytellers filled the campus with imagination.','photo-1507842217343-583bb7270b66'],['young-artists','Young artists exhibition','Creative Arts','Our annual exhibition invited families into a colourful world imagined by students.','photo-1513364776144-60967b0f800f']]; @endphp
+<section class="section bg-soft"><div class="shell grid gap-7 lg:grid-cols-3">@foreach($stories as [$anchor,$title,$category,$excerpt,$photo])<article class="card overflow-hidden reveal"><a href="{{ route('stories') }}#{{ $anchor }}" class="group block"><div class="h-64 overflow-hidden"><img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" src="https://images.unsplash.com/{{ $photo }}?auto=format&fit=crop&w=900&q=85" alt="{{ $title }}"></div><div class="p-7"><span class="tag">{{ $category }}</span><h2 class="mt-5 text-2xl font-black text-navy">{{ $title }}</h2><p class="mt-3 leading-7 text-muted">{{ $excerpt }}</p><span class="mt-6 inline-block font-black text-pink">Read story →</span></div></a></article>@endforeach</div></section>
+<x-cta />
+@endsection

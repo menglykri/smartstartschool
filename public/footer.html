@@ -1,0 +1,53 @@
+<!-- Opening this shared file directly previews the full website. -->
+<script>
+  if (/\/(?:header|footer)\.html$/.test(location.pathname)) {
+    location.replace(new URL('./', location.href).href);
+  }
+</script>
+<footer class="footer">
+      <div class="wrap mx-auto max-w-[1400px] px-6 max-[700px]:px-[18px]">
+        <div class="footer-grid grid grid-cols-[1.6fr_1fr_1fr_1fr] gap-[35px] max-[700px]:grid-cols-1">
+          <div>
+            <img
+              class="footer-logo mb-[15px] w-[260px]"
+              src="assets/logo-wide.png"
+              alt="Smart Start International School"
+            />
+            <p data-i18n="footer">Learning today. Leading tomorrow.</p>
+          </div>
+          <div>
+            <h3>School</h3>
+            <a href="about" data-i18n="about"> About School </a>
+            <a href="programs" data-i18n="programs"> Programs </a>
+            <a href="teachers" data-i18n="teachers"> Teachers </a>
+          </div>
+          <div>
+            <h3>Community</h3>
+            <a href="news" data-i18n="news"> News </a>
+            <a href="events" data-i18n="events"> Events </a>
+            <a href="gallery" data-i18n="gallery"> Gallery </a>
+            <a href="rankings" data-i18n="rankings"> Rankings </a>
+          </div>
+          <div>
+            <h3>Visit us</h3>
+            <p>
+              Phum Barach, Sangkat Svay Chrum, Krong Arey Ksat, Kandal Province
+              <br />
+              Mon–Fri · 6:00AM–20:00PM
+              <br />
+              Sat–Sun · 8:00AM–5:00PM
+              <br />
+              +855 70/085 366 345
+            </p>
+          </div>
+        </div>
+        <div class="copyright">
+          © <span data-current-year></span> Smart Start International School. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top" type="button" aria-label="Scroll back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5" />
+      </svg>
+    </button>
